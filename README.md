@@ -1,0 +1,31 @@
+import java.util.Scanner;
+
+public class Main {
+
+    // Simple price prediction formula
+    public static double predictPrice(double area, int bedrooms, int bathrooms) {
+        return (area * 50) + (bedrooms * 10000) + (bathrooms * 5000);
+    }
+
+    public static void main(String[] args) {
+
+        Scanner sc = new Scanner(System.in);
+
+        System.out.println("=== House Price Prediction System ===");
+
+        System.out.print("Enter Area (sq ft): ");
+        double area = sc.nextDouble();
+
+        System.out.print("Enter Number of Bedrooms: ");
+        int bedrooms = sc.nextInt();
+
+        System.out.print("Enter Number of Bathrooms: ");
+        int bathrooms = sc.nextInt();
+
+        double price = predictPrice(area, bedrooms, bathrooms);
+
+        System.out.println("Estimated House Price: " + price);
+
+        sc.close();
+    }
+}
